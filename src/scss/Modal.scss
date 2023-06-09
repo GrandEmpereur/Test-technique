@@ -1,0 +1,123 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &-enter {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    &-enter-active {
+        transform: translateY(0);
+        opacity: 1;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    &-exit {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    &-exit-active {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    &__content {
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        width: 37.5rem; // 600px
+        height: 37.5rem; // 600px
+        overflow: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 30px;
+
+        transform: translateY(50px); 
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        &--shopTitle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 13px;
+        }
+
+        &--shopInformation {
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 35px 0;
+            }
+
+            img {
+                width: 35rem; // 560px
+                height: 13.8rem; // 221px
+                border-radius: 10px;
+            }
+        }
+
+        &--shopScore {
+            width: 100%;
+            height: 14.25rem;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 0;
+            left: 0;
+            
+            background: var(--color-white);
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.35);
+            border-radius: 20px 20px 0px 0px;
+            color: var(--color-dark-blue);
+            border-radius: 20px 20px 0 0;
+            padding: 20px 30px;
+            column-gap: 35px;
+
+            .Modal__content--shopScore--items {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+
+                &-score {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    row-gap: 13px;
+
+                    font-size: 17.5px;
+                    font-weight: 500;
+                }
+
+                &-R {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

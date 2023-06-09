@@ -1,0 +1,26 @@
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Variables defined in this file are value that are considered as "static" and should not be changed.
+
+// ---------------------------------------------------------------------------------------------------------------------
+:root {
+    // Colors
+    --color-dark-blue: #21305B;
+    --color-light-blue: #3498db;
+    --color-dark-black: #242424;
+    --color-white: #fff;
+    --color-light-gray: #F5F5F5;
+    --color-black: #030302;
+    --color-error: #E2918C;
+    --color-success: #88BEA2;
+}
+
+$colors: (
+    "dark-blue": #21305B,
+    "light-blue": #3498db,
+    "dark-black": #242424,
+    "white": #fff,
+    "black": #030302,
+    "error": #E2918C,
+    "success": #88BEA2
+);

@@ -1,0 +1,14 @@
+@import "./settings/reset";
+@import "./core/variables";
+@import "./settings/animations";
+
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-dark-black);
+}
+
+svg {
+  cursor: pointer;
+}
